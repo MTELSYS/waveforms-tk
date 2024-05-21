@@ -1,0 +1,49 @@
+@import '_variables';
+@import '_mixins';
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  background: $blue-lighten-4;
+  color: $grey-darken-5;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: $grey-darken-3;
+  }
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+p,
+span {
+  font-size: 12px;
+}
+
+.font-subtle {
+  color: $grey-darken-3;
+}
+
+body {
+  background-color: var(--bg-color1);
+  color: var(--font-color);
+}

@@ -1,4 +1,5 @@
 <script>
+	import '../app.css';
 	import '$lib/scss/global.scss';
 </script>
 
@@ -7,7 +8,7 @@
 </nav>
 
 <main>
-	<slot />
+	<slot></slot>
 </main>
 
 <footer>
@@ -44,7 +45,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-    min-height: 75vh;
+		min-height: 75vh;
 
 		@include desktop {
 			max-width: 900px;
@@ -52,7 +53,7 @@
 	}
 
 	footer {
-		position: absolute;
+		position: relative;
 		bottom: 0;
 		height: 450px;
 		width: 100vw;
