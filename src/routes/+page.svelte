@@ -80,8 +80,8 @@
 	{:else}
 		{#each value as file}
 			<Card>
-				<div class="card flex flex-cols justify-between">
-					<div class="text-left">
+				<div class="card flex flex-cols justify-between w-full">
+					<div class="text-left w-full">
 						<h2>{file.name}</h2>
 						<p>
 							{file.size.toLocaleString('en-US', {
