@@ -190,7 +190,7 @@
 					<Helper id="helper-legends">Set channel legends</Helper>
 					<hr class="solid mb-4">
 	
-					<div class="flex flex-rows justify-between items-center">
+					<div class="flex flex-rows justify-between items-center mb-2">
 						<Label for="ch1-legend" class="w-full">Channel 1</Label>
 						<Input id="ch1-legend" name="ch1-legend" placeholder="Signal 1" />
 					</div>
