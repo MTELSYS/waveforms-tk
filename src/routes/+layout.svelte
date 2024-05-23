@@ -1,11 +1,16 @@
 <script>
 	import '../app.css';
 	import '$lib/scss/global.scss';
+
+	import { Navbar, NavBrand } from 'flowbite-svelte'
 </script>
 
-<nav>
-	<a href="http://mtelsys.no/">mtelsys.no</a>
-</nav>
+<Navbar rounded color="none">
+	<NavBrand href="http://mtelsys.no">
+		<img src="./images/elsys-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Elsys Logo" />
+		<span class="self-center whitespace-nowrap text-xl font-semibold">MTELSYS</span>
+	</NavBrand>
+</Navbar>
 
 <main>
 	<slot></slot>
@@ -16,29 +21,6 @@
 </footer>
 
 <style lang="scss">
-	nav {
-		color: $grey-darken-5;
-		padding: 1rem;
-
-		a {
-			color: $grey-darken-5;
-			text-decoration: none;
-			font-weight: bold;
-			font-size: 1rem;
-
-			&:hover {
-				text-decoration: none !important;
-			}
-
-			&:visited {
-				color: $grey-darken-5;
-			}
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-	}
-
 	main {
 		padding-inline: 1rem;
 		margin-inline: auto;
