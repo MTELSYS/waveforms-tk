@@ -40,12 +40,13 @@
 	}
 
 	main {
-		width: 90vw;
+		padding-inline: 1rem;
 		margin-inline: auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		min-height: 75vh;
+		height: 100%;
+		padding-bottom: 500px;
 
 		@include desktop {
 			max-width: 900px;
@@ -53,10 +54,10 @@
 	}
 
 	footer {
-		position: relative;
+		position: absolute;
 		bottom: 0;
 		height: 450px;
-		width: 100vw;
+		width: 100%;
 		background: $blue;
 	}
 </style>
