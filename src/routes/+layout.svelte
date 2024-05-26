@@ -16,8 +16,12 @@
 	<slot></slot>
 </main>
 
-<footer>
-	<p>© 2024 mtelsys.no</p>
+<footer class="w-full">
+	<img src="./images/footer-separator.svg" alt="Elsys Logo" />
+	<div class="footer-content w-full h-auto px-6 py-6">
+		<h2 class="font-bold">MTELSYS</h2>
+		<p>mtelsys.no © 2024</p>
+	</div>
 </footer>
 
 <style lang="scss">
@@ -31,7 +35,7 @@
 		padding-bottom: 500px;
 
 		@include desktop {
-			max-width: 900px;
+			max-width: 960px;
 		}
 	}
 
@@ -41,5 +45,6 @@
 		height: 450px;
 		width: 100%;
 		background: $blue;
+		color: $blue-lighten-4;
 	}
 </style>

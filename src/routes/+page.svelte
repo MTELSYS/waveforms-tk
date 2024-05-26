@@ -13,10 +13,18 @@
 	} from 'flowbite-svelte';
 	import { FileChartBarOutline, ChartOutline, ChartMixedOutline, CodeForkOutline } from 'flowbite-svelte-icons';
 
+	import PrefixSelect from '$lib/components/PrefixSelect.svelte';
+
 	let selectedPlotType: string = 'scope';
 
 	let numberOfChannels: number = 1;
 	let channelsToShow: number = 0;
+
+	let xLimPrefixLowerBound = 1
+	let xLimPrefixUpperBound = 1
+
+	let yLimPrefixLowerBound = 1
+	let yLimPrefixUpperBound = 1
 
 	let value: any = [];
 	const dropHandle = (event) => {
@@ -53,7 +61,7 @@
 	};
 </script>
 
-<section id="banner">
+<section id="banner" class="flex flex-col text-center justify-center">
 	<h1 class="font-bold">Waveforms Toolkit</h1>
 	<p class="font-subtle">
 		A tool made for easily plotting your Analog Discovery 2 data during lab sessions in ESDA
@@ -107,7 +115,7 @@
 		</ButtonGroup>
 </section>
 
-<section class="flex flex-col items-center gap-6">
+<section class="flex flex-col items-center gap-6 md:w-auto w-full">
 		<h2 class="font-semibold">Settings</h2>
 		
 		<div class="flex flex-cols items-center justify-between w-full">
@@ -141,13 +149,13 @@
 	
 					<div class="flex flex-rows gap-2 mb-2 items-center">
 						<Label for="ax-x-lim" class="w-full">Limit x-axis</Label>
-						<NumberInput id="x-lim" placeholder="min" /> -
-						<NumberInput id="x-lim" placeholder="max" />
+						<NumberInput id="x-lim" placeholder="min" /><PrefixSelect bind:value={xLimPrefixLowerBound} unit="s" /> -
+						<NumberInput id="x-lim" placeholder="max" /><PrefixSelect bind:value={xLimPrefixUpperBound} unit="s"/>
 					</div>
 					<div class="flex flex-rows gap-2 items-center">
 						<Label for="ax-y-lim" class="w-full">Limit y-axis</Label>
-						<NumberInput id="y-lim" placeholder="min" /> -
-						<NumberInput id="y-lim" placeholder="max" />
+						<NumberInput id="y-lim" placeholder="min" /><PrefixSelect bind:value={yLimPrefixLowerBound} /> -
+						<NumberInput id="y-lim" placeholder="max" /><PrefixSelect bind:value={yLimPrefixUpperBound} />
 					</div>
 				</section>
 	
@@ -219,8 +227,7 @@
 
 <style lang="scss">
 	#banner {
-		padding: 1rem;
-		text-align: center;
+		height: 25vh;
 	}
 
 	#uploader {
